@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+
+#canvasContainer {
+  position: relative;
+  display: inline-block;
+}
+
+/* Util */
+.w-100 {
+  width: 100%;
+}
+
+/* Score UI */
+#topBar {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 20px;
+}
+
+.healthBarContainer {
+  position: relative;
+  height: 30px;
+  width: 100%;
+}
+
+.leftBar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.healthBar {
+  position: absolute;
+  background: blue;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+#enemyHealth {
+  left: 0;
+}
+
+.underBar {
+  background-color: yellow;
+  height: 30px;
+}
+
+#timer {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#middleText {
+  position: absolute;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: none;
+}

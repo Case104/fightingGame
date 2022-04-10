@@ -1,8 +1,8 @@
 const canvas = document.querySelector("canvas");
 const c = canvas.getContext("2d");
 
-canvas.width = 1024;
-canvas.height = 576;
+canvas.width = 1280;
+canvas.height = 720;
 
 c.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -67,7 +67,7 @@ class Sprite {
 
 const player = new Sprite({
   position: {
-    x: 0,
+    x: 200,
     y: 0,
   },
   velocity: {
@@ -82,7 +82,7 @@ const player = new Sprite({
 
 const enemy = new Sprite({
   position: {
-    x: 400,
+    x: 1080,
     y: 100,
   },
   velocity: {
@@ -128,13 +128,13 @@ function rectangularCollision({ rect1, rect2 }) {
 
 function determineWinner({ player, enemy, timerId }) {
   clearTimeout(timerId);
-  document.querySelector("#displayText").style.display = "flex";
+  document.querySelector("#middleText").style.display = "flex";
   if (player.health === enemy.health) {
-    document.querySelector("#displayText").innerHTML = "Tie";
+    document.querySelector("#middleText").innerHTML = "Tie";
   } else if (player.health > enemy.health) {
-    document.querySelector("#displayText").innerHTML = "Red Wins";
+    document.querySelector("#middleText").innerHTML = "Red Wins";
   } else if (player.health < enemy.health) {
-    document.querySelector("#displayText").innerHTML = "Blue Wins";
+    document.querySelector("#middleText").innerHTML = "Blue Wins";
   }
 }
 
